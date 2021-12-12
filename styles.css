@@ -1,0 +1,2749 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+/* INDEX ---------------------------------------------------------------------
+
+1: BASICS (whole html) ---------------------------------------------------------------------
+2: NAV ---------------------------------------------------------------------
+3: OPEN NAV (menu overlay window) -----------------------------------------------------------------
+4.1: MAIN (index.html) ---------------------------------------------------------------------
+4.2: PROJECTS (index.html) ---------------------------------------------------------------------
+4.3: SKILLS + ABOUT (index.html) ------------------------------------------------------------------
+5: FOOTER ---------------------------------------------------------------------
+
+6: OTHER PAGES (local nav + essentials) -----------------------------------------------------------
+6.1: FACTORY ---------------------------------------------------------------------
+6.2: BOOK COLLECTION ---------------------------------------------------------------------
+6.3: TRANSPARENCY ---------------------------------------------------------------------
+6.1: BANCO ALIMENTAR ---------------------------------------------------------------------
+
+7: MEDIA QUERIES ---------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/* BASICS -------------------------------------------------------------- */
+
+@font-face {
+  font-family: Inter;
+  src: url(fonts/Inter-VariableFont_slnt,wght.ttf);
+	font-weight: 200 900;
+}
+
+:root {
+  --accent: #B8EF1C;
+}
+
+html {
+  font-family: Inter;
+  background: #F2F2F2;
+  color: #333333;
+}
+
+h1 {
+	font-size: 11vw;
+	font-weight: 700;
+	margin-bottom: 0.5em;
+}
+
+h2 {
+	font-size: 11vw;
+	font-weight: 700;
+	padding-top: 21vw;
+	margin-bottom: 0.5em;
+}
+
+h3 {
+	font-weight: 600;
+	margin-bottom: 0.65em;
+	font-size: 5vw;
+}
+
+a {
+  text-decoration: none;
+	color: #333333;
+}
+
+/* NAV --------------------------------------------------------------*/
+nav {
+  height: 17vw;
+	width: 100vw;
+	box-sizing: border-box;
+	background: #F2F2F2;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  padding-left: 6vw;
+  padding-right: 6vw;
+	position: fixed;
+	z-index: 2;
+}
+
+nav p {
+	font-weight: 400;
+	font-size: 4.7vw;
+	position: absolute;
+	bottom: 3vw;
+	left: 6vw;
+}
+
+nav span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.bar {
+  width: 5.5vw;
+  height: 2px;
+  margin-bottom: 1vw;
+  background: #333333;
+  border-radius: 10px;
+}
+
+.menu {
+  position: absolute;
+  bottom: 3vw;
+	right: 6vw;
+	cursor: pointer;
+	z-index: 4;
+}
+
+/* MENU OVERLAY WINDOW */
+
+.nav-items {
+	width: 100vw;
+	height: 0;
+	z-index: 3;
+	box-sizing: border-box;
+	background: #F2F2F2;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow-y: hidden;
+
+	transition: 0.3s;
+}
+
+.nav-items ul {
+	height: 95vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 7vw;
+	line-height: 1.5em;
+}
+
+
+
+
+
+
+/* MAIN ------------------------------------------------------------- */
+
+main {
+  padding: 0 6vw 20vw 6vw;
+	overflow: hidden;
+	box-sizing: border-box;
+	width: 100vw;
+	position: relative;
+}
+
+.landing {
+	height: 100vh;
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: visible;
+	display: flex;
+	align-items: center;
+}
+
+.myPicture {
+  width: 45vw;
+  border-radius: 50%;
+  float: right;
+  margin-right: 6vw;
+	margin-bottom: 3vw;
+}
+
+.welcome {
+  font-weight: 400;
+	font-size: 8vw;
+  line-height: 1.3em;
+  clear: right;
+	margin-left: 6vw;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.main-note {
+	margin-left: 6vw;
+	margin-top: 7vw;
+}
+
+.main-note p {
+  font-weight: 400;
+  font-size: 4.4vw;
+  color: #828282;
+}
+
+
+
+
+
+
+/* PROJECTS --------------------------------------------------------*/
+
+.top {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.box {
+	font-size: 4.2vw;
+	display: inline-block;
+	padding: 1.3vw 2.4vw;
+	width: fit-content;
+	background: var(--accent);
+	border-radius: 50px;
+	margin-bottom: 0.4em;
+	margin-right: 0.1em;
+	cursor: pointer;
+}
+
+.project .box {
+	margin-bottom: 3.5vw;
+}
+
+.projects-nav {
+	margin-bottom: 15vw;
+}
+
+.project-intro {
+	height: 78vw;
+	margin-bottom: 10vw;
+	overflow: hidden;
+	border-radius: 6px;
+}
+
+.project-intro h3 {
+	position: relative;
+	top: 4vw;
+	left: 3.5vw;
+	font-weight: 400;
+	font-size: 6.2vw;
+}
+
+.project-intro img {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.title-holder {
+	color: #F2F2F2;
+	background: black;
+	height: 13.5vw;
+	position: relative;
+	top: -5.3vw;
+}
+
+#f {
+	background: #ddbcbd;
+	color: white;
+}
+
+#l {
+	background: #110801;
+}
+
+#t {
+	background: lightgrey;
+	text-shadow: 2px 2px 20px grey;
+}
+
+#ba {
+	background: #131313;
+}
+
+
+
+
+
+
+/* SKILLS & ABOUT --------------------------------------------------------*/
+
+#skills, #about {
+	height: auto;
+	position: relative;
+	overflow: visible;
+}
+
+#skills h2, #about h2 {
+	margin-bottom: 8vw;
+}
+
+#skills p,  #about p {
+	font-size: 4.5vw;
+	line-height: 1.5em;
+	margin-bottom: 5vw;
+}
+
+#about p {
+	clear: left;
+	width: 85vw;
+}
+
+#skills span {
+	font-size: 4.5vw;
+	font-weight: 600;
+	color: var(--accent);
+}
+
+#about .myPicture {
+	float: left;
+	margin-top: 0;
+	width: 45vw;
+	margin-bottom: 8vw;
+}
+
+#about span {
+	font-weight: 600;
+}
+
+#about span:first-of-type {
+	color: var(--accent);
+}
+
+
+
+
+
+/* FOOTER ---------------------------------------------------------*/
+
+footer {
+	border-top: solid 1px lightgrey;
+	background: #F2F2F2;
+	padding: 15vw 6vw 10vw 6vw;
+	color: #333333;
+	font-weight: 400;
+	font-size: 4.5vw;
+	line-height: 1.5em;
+	box-sizing: border-box;
+}
+
+footer section:first-of-type {
+	margin-bottom: 4em;
+}
+
+footer section a, #email {
+	color: var(--accent);
+	text-decoration: underline;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+footer p {
+	margin-bottom: 0.65em;
+}
+
+.hide {
+	display: none;
+}
+
+
+
+
+
+
+/* OTHER PAGES - PROJECTS ----------------------------------------------------- */
+
+/* LOCAL NAV - TOP OF PAGE ----------------------------------------------------- */
+
+.local-nav {
+	z-index: 1;
+	position: relative;
+	top: 25vw;
+	font-size: 5vw;
+	opacity: 0.5;
+}
+
+.local-nav span {
+	font-weight: 300;
+	font-size: 5vw;
+	position: relative;
+	top: -1px;
+}
+
+/* PROJECTS ESSENTIALS ----------------------------------------------------- */
+
+.project h1 {
+	margin-top: 35vw;
+}
+
+.infos {
+	font-size: 4.2vw;
+	font-weight: 400;
+	line-height: 1.3em;
+	margin-top: 2vw;
+	margin-bottom: 20vw;
+}
+
+.project img {
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 5px;
+	margin-bottom: 0.3em;
+	margin-top: 0.3em;
+}
+
+/* text -------------------------------- */
+
+.text {
+	font-size: 5.3vw;
+	line-height: 1.4em;
+	margin-top: 10vw;
+	margin-bottom: 20vw;
+}
+
+.text span {
+	font-weight: 700;
+}
+
+.text a {
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+.text:first-of-type {
+	margin-top: 0;
+	margin-bottom: 2em;
+}
+
+.text:last-of-type {
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+
+/* arrow -------------------------------- */
+
+.arrow {
+	color: var(--accent);
+}
+
+.arrow-head {
+	margin-top: 15vw;
+  border: solid #F2F2F2;
+	border-width: 0 0.6vw 0.6vw 0;
+	display: inline-block;
+	padding: 1.5vw;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+}
+
+/* final credits -------------------------------- */
+
+.credits {
+	margin-top: 30vw;
+	font-size: 4.5vw;
+	line-height: 1.4em;
+	font-weight: 200;
+	padding-bottom: 5vw;
+}
+
+.credits span {
+	font-weight: 450;
+}
+
+.credits p {
+	margin-bottom: 1em;
+}
+
+/* videos -------------------------------- */
+
+.embed-container {
+position: relative;
+padding-bottom: 56.25%;
+height: 0; overflow: hidden;
+max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+position: absolute;
+top: 0; left: 0;
+width: 100%;
+height: 100%;
+}
+
+.vertical video {
+	position: relative;
+	left: -45%;
+	margin-bottom: 3rem;
+}
+
+#vid {
+	border-radius: 5px;
+}
+
+
+/* FACTORY - PROJECTS  ----------------------------------------------------- */
+
+#fa-info {
+	margin-bottom: 0;
+}
+
+.info-clb {
+	margin-top: 2vw;
+	margin-bottom: 20vw;
+	line-height: 1.3em;
+	font-size: 4.2vw;
+}
+
+
+/* BOOK COLLECTION ----------------------------------------------------- */
+
+/* cover image ----------------------------------------------------- */
+
+.vertical {
+	width: 88vw;
+	box-sizing: border-box;
+	margin-top: 1rem;
+	border-radius: 5px;
+	padding: 0;
+	overflow: hidden;
+}
+
+.vertical .cover {
+	margin-bottom: 1rem;
+}
+
+.vertical img {
+	width: 200%;
+	position: relative;
+	left: -50%;
+	margin: 0;
+}
+
+/* other images ----------------------------------------------------- */
+
+.vertical2 {
+	width: 100vw;
+	position: relative;
+	left: -6vw;
+	box-sizing: border-box;
+	margin-top: 1rem;
+	border-radius: 5px;
+	padding: 0;
+	overflow: hidden;
+}
+
+.vertical3 {
+	width: 170vw;
+	position: relative;
+	left: -40vw;
+	box-sizing: border-box;
+	margin-top: 1rem;
+	padding: 0;
+	overflow: hidden;
+}
+
+.vertical3 img {
+	margin: 0;
+}
+
+#bc-3covers {
+	margin-bottom: 35px;
+}
+
+#cover img {
+	width: 180%;
+	position: relative;
+	left: -53%;
+}
+
+#cover-02 img {
+	width: 165%;
+	position: relative;
+	left: -37%;
+	margin: 0;
+}
+
+#cover-03 img {
+	width: 185%;
+	position: relative;
+	left: -30%;
+	margin: 0;
+}
+
+#bc-vertical  {
+	width: 120%;
+	position: relative;
+	left: -10%;
+	margin: 0;
+	margin-bottom: 2em;
+}
+
+#bc-plain {
+	width: 140%;
+	position: relative;
+	left: -20%;
+}
+
+
+/* TRANSPARENCY ----------------------------------------------------- */
+
+/* images ----------------------------------------------------- */
+
+#tp-m4 {
+	height: 130vw;
+}
+
+#tp-m4 img {
+	position: relative;
+	top: -10vw;
+}
+
+.vertical-tp {
+	width: 270vw;
+	position: relative;
+	top: -7vw;
+	left: -90vw;
+	box-sizing: border-box;
+	padding: 0;
+	overflow: hidden;
+}
+
+.vertical-tp-pc {
+	width: 160vw;
+	position: relative;
+	left: -36.5vw;
+	box-sizing: border-box;
+	padding: 0;
+	padding-bottom: 1rem;
+	overflow: hidden;
+	background: linear-gradient(180deg, #b2b2b2 25%, lightgrey 26%);
+}
+
+.vertical-tp-pc:last-of-type {
+	margin-bottom: 0;
+}
+
+.vertical-tp-pc2 {
+	width: 160vw;
+	position: relative;
+	left: -45vw;
+	box-sizing: border-box;
+	padding: 0;
+	overflow: hidden;
+	margin-bottom: 10vw;
+}
+
+
+/* BANCO ALIMENTAR ----------------------------------------------------- */
+
+/* images ----------------------------------------------------- */
+
+#ba-02 {
+	width: 150vw;
+	left: -30vw;
+}
+
+#ba-03 {
+	width: 195vw;
+	left: -52.5vw;
+}
+
+.ba-colors {
+	width: 110vw;
+	height: 35vw;
+	position: relative;
+	left: -11vw;
+	box-sizing: border-box;
+	margin-top: 1rem;
+	margin-bottom: 20vw;
+	padding: 0;
+	padding-bottom: 1rem;
+	overflow: hidden;
+}
+
+#ba-colors {
+	position: relative;
+	top: -21.5vw;
+}
+
+.vertical-ba {
+	width: 190vw;
+	position: relative;
+	left: -50vw;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.vertical-ba2 {
+	width: 140vw;
+	position: relative;
+	left: -25vw;
+	box-sizing: border-box;
+	padding: 0;
+	overflow: hidden;
+}
+
+#ba-07 {
+	width: 160vw;
+	left: -36vw;
+}
+
+.vertical-ba2:last-of-type {
+	width: 180vw;
+	height: 80vw;
+	margin-top: 5vw;
+	position: relative;
+	left: -45vw;
+	box-sizing: border-box;
+	padding: 0;
+	overflow: hidden;
+}
+
+
+
+/* MEDIA QUERIES ------------------------------------------------------------------ */
+
+@media only screen and (min-width: 450px) {
+	h2 {
+		font-size: 7vw;
+		padding-top: 12vw;
+	}
+
+	h3 {
+		font-weight: 600;
+		margin-bottom: 0.65em;
+		font-size: 3.5vw;
+	}
+
+	/* NAV --------------------------------------------------------------*/
+	nav {
+	  height: 10vw;
+	  padding-left: 6vw;
+	  padding-right: 6vw;
+	}
+
+	nav p {
+		font-size: 3.4vw;
+		bottom: 2vw;
+		left: 4vw;
+	}
+
+	.bar {
+	  width: 4vw;
+	  height: 2px;
+	  margin-bottom: 0.55vw;
+	}
+
+	.menu {
+		position: absolute;
+	  bottom: 1.7vw;
+		right: 4vw;
+	}
+
+	/* MENU OVERLAY WINDOW */
+	.nav-items ul {
+		font-size: 5vw;
+	}
+
+	/* MAIN ------------------------------------------------------------- */
+
+	main {
+		padding: 0 6vw 20vw 6vw;
+	}
+
+	.landing {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.landing div {
+		width: 60vw;
+	}
+
+	.myPicture {
+		width: 35vw;
+		float: right;
+		margin-right: 0;
+		margin-bottom: 2vw;
+	}
+
+	.welcome {
+		font-size: 6vw;
+		line-height: 1.3em;
+		clear: right;
+		margin-left: 0;
+	}
+
+	.main-note {
+		margin-left: 0;
+		margin-top: 4.5vw;
+	}
+
+	.main-note p {
+		font-size: 4vw;
+	}
+
+	/* PROJECTS --------------------------------------------------------*/
+	.box {
+		font-size: 3.5vw;
+		padding: 1vw 2vw;
+	}
+
+	.project .box {
+		margin-bottom: 3.5vw;
+	}
+
+	.projects-nav {
+		margin-bottom: 8vw;
+	}
+
+	.project-intro {
+		height: 78vw;
+		margin-bottom: 8vw;
+		border-radius: 10px;
+	}
+
+	.project-intro h3 {
+		top: 5vw;
+		left: 3.5vw;
+		font-size: 5vw;
+	}
+
+	/* SKILLS & ABOUT --------------------------------------------------------*/
+
+#skills h2, #about h2 {
+	margin-bottom: 8vw;
+}
+
+#skills p,  #about p {
+	font-size: 3.7vw;
+	line-height: 1.5em;
+	margin-bottom: 1em;
+	width: 75vw;
+}
+
+#about p {
+	clear: left;
+}
+
+#skills span {
+	font-size: 3.7vw;
+	font-weight: 600;
+	color: var(--accent);
+}
+
+#about .myPicture {
+	float: left;
+	margin-top: 0;
+	width: 30vw;
+	margin-bottom: 8vw;
+}
+
+#about span {
+	font-weight: 600;
+}
+
+#about span:first-of-type {
+	color: var(--accent);
+}
+
+/* FOOTER ---------------------------------------------------------*/
+
+	footer {
+		padding: 15vw 6vw 10vw 6vw;
+		font-size: 3.2vw;
+		line-height: 1.5em;
+	}
+
+	footer p {
+		margin-bottom: 0.65em;
+		width: 100%;
+	}
+
+	/* OTHER PAGES - PROJECTS ----------------------------------------------------- */
+
+	/* LOCAL NAV - TOP OF PAGE ----------------------------------------------------- */
+
+	.local-nav {
+		position: relative;
+		top: 15vw;
+		font-size: 3.5vw;
+	}
+
+	.local-nav span {
+		font-size: 3.5vw;
+	}
+
+	/* PROJECTS ESSENTIALS ----------------------------------------------------- */
+
+	h1 {
+		font-size: 8vw;
+		margin-bottom: 0.5em;
+	}
+
+	.project h1 {
+		margin-top: 2.7em;
+	}
+
+	.infos {
+		font-size: 3vw;
+		line-height: 1.3em;
+		margin-top: 2vw;
+		margin-bottom: 12vw;
+	}
+
+	.project img {
+		border-radius: 10px;
+		margin-bottom: 0.5em;
+		margin-top: 0.5em;
+	}
+
+	/* text -------------------------------- */
+
+	.text {
+		font-size: 4vw;
+		line-height: 1.5em;
+		margin-top: 2em;
+		margin-bottom: 3.5em;
+		width: 95%;
+	}
+
+	.text:last-of-type {
+		margin-top: 2em;
+		margin-bottom: 0;
+	}
+
+	/* arrow -------------------------------- */
+
+	.arrow {
+		color: var(--accent);
+	}
+
+	.arrow-head {
+		margin-top: 15vw;
+	  border: solid #F2F2F2;
+		border-width: 0 0.3vw 0.3vw 0;
+		display: inline-block;
+		padding: 1.5vw;
+	  box-sizing: border-box;
+	  transform: rotate(-135deg);
+	}
+
+	/* final credits -------------------------------- */
+
+	.credits {
+		margin-top: 20vw;
+		font-size: 3.2vw;
+		line-height: 1.4em;
+		font-weight: 200;
+		padding-bottom: 5vw;
+	}
+
+	/* videos -------------------------------- */
+
+	.vertical video {
+		position: relative;
+		left: -45%;
+		margin-bottom: 3rem;
+	}
+
+	/* FACTORY - PROJECTS  ----------------------------------------------------- */
+
+	#fa-info {
+		margin-bottom: 0;
+	}
+
+	.info-clb {
+		margin-top: 1vw;
+		margin-bottom: 10vw;
+		line-height: 1.3em;
+		font-size: 3vw;
+	}
+
+
+	/* BOOK COLLECTION ----------------------------------------------------- */
+
+	/* cover image ----------------------------------------------------- */
+
+	.vertical {
+		width: 88vw;
+		box-sizing: border-box;
+		margin-top: 1rem;
+		border-radius: 5px;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.vertical .cover {
+		margin-bottom: 1rem;
+	}
+
+	.vertical img {
+		width: 150%;
+		position: relative;
+		left: -25%;
+		margin: 0;
+	}
+
+	/* other images ----------------------------------------------------- */
+
+	.vertical2 {
+		width: 100vw;
+		position: relative;
+		left: -6vw;
+		box-sizing: border-box;
+		margin-top: 1rem;
+		border-radius: 5px;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.vertical3 {
+		width: 170vw;
+		position: relative;
+		left: -40vw;
+		box-sizing: border-box;
+		margin-top: 1rem;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.vertical3 img {
+		margin: 0;
+	}
+
+	#bc-3covers {
+		margin-bottom: 35px;
+	}
+
+	#cover img {
+		width: 180%;
+		position: relative;
+		left: -53%;
+	}
+
+	#cover-02 img {
+		width: 165%;
+		position: relative;
+		left: -37%;
+		margin: 0;
+	}
+
+	#cover-03 img {
+		width: 165%;
+		position: relative;
+		left: -20%;
+		margin: 0;
+	}
+
+	#bc-vertical  {
+		width: 120%;
+		position: relative;
+		left: -10%;
+		margin: 0;
+		margin-bottom: 2em;
+	}
+
+	#bc-plain {
+		width: 140%;
+		position: relative;
+		left: -20%;
+	}
+
+
+	/* TRANSPARENCY ----------------------------------------------------- */
+
+	/* images ----------------------------------------------------- */
+
+	#tp-m4 {
+		height: 100%;
+	}
+
+	#tp-m4 img {
+		top: 0;
+	}
+
+	.vertical-tp {
+		width: 200vw;
+		position: relative;
+		top: -7vw;
+		left: -55vw;
+	}
+
+	.vertical-tp-pc {
+		width: 140vw;
+		left: -26vw;
+		padding: 0;
+		padding-bottom: 1rem;
+	}
+
+	.vertical-tp-pc:last-of-type {
+		margin-bottom: 0;
+	}
+
+	.vertical-tp-pc2 {
+		width: 160vw;
+		left: -45vw;
+		padding: 0;
+		margin-bottom: 10vw;
+	}
+
+
+	/* BANCO ALIMENTAR ----------------------------------------------------- */
+
+	/* images ----------------------------------------------------- */
+
+	#ba-02 {
+		width: 150vw;
+		left: -30vw;
+	}
+
+	#ba-03 {
+		width: 195vw;
+		left: -52.5vw;
+	}
+
+	.ba-colors {
+		width: 110vw;
+		height: 32vw;
+		left: -11vw;
+		margin-top: 1rem;
+		margin-bottom: 0vw;
+		padding: 0;
+		padding-bottom: 1rem;
+	}
+
+	#ba-colors {
+		top: -19.5vw;
+	}
+
+	.vertical-ba {
+		width: 190vw;
+		left: -50vw;
+	}
+
+	.vertical-ba2 {
+		width: 130vw;
+		left: -20vw;
+	}
+
+	#ba-07 {
+		width: 150vw;
+		left: -30vw;
+	}
+
+	.vertical-ba2:last-of-type {
+		width: 170vw;
+		height: 70vw;
+		margin-top: 5vw;
+		left: -40vw;
+	}
+
+
+}
+
+@media only screen and (min-width: 550px) {
+
+	h2 {
+		font-size: 7vw;
+		padding-top: 12vw;
+	}
+
+	h3 {
+		font-weight: 600;
+		margin-bottom: 0.65em;
+		font-size: 3.5vw;
+	}
+
+	/* NAV --------------------------------------------------------------*/
+	nav {
+	  height: 10vw;
+	  padding-left: 6vw;
+	  padding-right: 6vw;
+	}
+
+	nav p {
+		font-size: 3vw;
+		bottom: 2vw;
+		left: 4vw;
+	}
+
+	.bar {
+	  width: 4vw;
+	  height: 2px;
+	  margin-bottom: 0.5vw;
+	}
+
+	.menu {
+		position: absolute;
+	  bottom: 1.7vw;
+		right: 4vw;
+	}
+
+	/* MENU OVERLAY WINDOW */
+	.nav-items ul {
+		font-size: 4.5vw;
+	}
+
+
+	/* MAIN ------------------------------------------------------------- */
+
+	main {
+	  padding: 0 6vw 20vw 6vw;
+	}
+
+	.landing {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.landing div {
+		width: 60vw;
+	}
+
+	.myPicture {
+	  width: 35vw;
+	  float: right;
+	  margin-right: 0;
+		margin-bottom: 2vw;
+	}
+
+	.welcome {
+		font-size: 6vw;
+	  line-height: 1.3em;
+	  clear: right;
+		margin-left: 0;
+	}
+
+	.main-note {
+		margin-left: 0;
+		margin-top: 4.5vw;
+	}
+
+	.main-note p {
+	  font-weight: 400;
+	  font-size: 4vw;
+	  color: #828282;
+	}
+
+
+	/* PROJECTS --------------------------------------------------------*/
+	.box {
+		font-size: 3vw;
+		padding: 1vw 2vw;
+	}
+
+	.project .box {
+		margin-bottom: 3.5vw;
+	}
+
+	.projects-nav {
+		margin-bottom: 8vw;
+	}
+
+	.project-intro {
+		height: 78vw;
+		margin-bottom: 8vw;
+		border-radius: 10px;
+	}
+
+	.project-intro h3 {
+		top: 5vw;
+		left: 3.5vw;
+		font-size: 5vw;
+	}
+
+	/* SKILLS & ABOUT --------------------------------------------------------*/
+
+	#skills h2, #about h2 {
+		margin-bottom: 8vw;
+	}
+
+	#skills p,  #about p {
+		font-size: 3vw;
+		line-height: 1.5em;
+		margin-bottom: 1em;
+		width: 68vw;
+	}
+
+	#about p {
+		clear: left;
+	}
+
+	#skills span {
+		font-size: 3vw;
+		font-weight: 600;
+		color: var(--accent);
+	}
+
+	#about .myPicture {
+		float: left;
+		margin-top: 0;
+		width: 30vw;
+		margin-bottom: 8vw;
+	}
+
+	#about span {
+		font-weight: 600;
+	}
+
+	#about span:first-of-type {
+		color: var(--accent);
+	}
+
+
+
+	/* FOOTER ---------------------------------------------------------*/
+
+	footer {
+		padding: 15vw 6vw 10vw 6vw;
+		font-size: 2.7vw;
+		line-height: 1.5em;
+	}
+
+	footer p {
+		margin-bottom: 0.65em;
+		width: 100%;
+	}
+
+	/* OTHER PAGES - PROJECTS ----------------------------------------------------- */
+
+	/* LOCAL NAV - TOP OF PAGE ----------------------------------------------------- */
+
+	.local-nav {
+		position: relative;
+		top: 15vw;
+		font-size: 3vw;
+	}
+
+	.local-nav span {
+		font-size: 3vw;
+	}
+
+	/* PROJECTS ESSENTIALS ----------------------------------------------------- */
+
+	h1 {
+		font-size: 8vw;
+		margin-bottom: 0.5em;
+	}
+
+	.project h1 {
+		margin-top: 2.7em;
+	}
+
+	.infos {
+		font-size: 2.7vw;
+		line-height: 1.3em;
+		margin-top: 2vw;
+		margin-bottom: 12vw;
+	}
+
+	.project img {
+		border-radius: 10px;
+		margin-bottom: 0.5em;
+		margin-top: 0.5em;
+	}
+
+	/* text -------------------------------- */
+
+	.text {
+		font-size: 3.2vw;
+		line-height: 1.4em;
+		margin-top: 2em;
+		margin-bottom: 3.5em;
+		width: 95%;
+	}
+
+	/* .text:nth-of-type(1) {
+		margin-top: 0;
+		margin-bottom: 5vw;
+	} */
+
+	.text:last-of-type {
+		margin-top: 2em;
+		margin-bottom: 0;
+	}
+
+	/* arrow -------------------------------- */
+
+	.arrow {
+		color: var(--accent);
+	}
+
+	.arrow-head {
+		margin-top: 15vw;
+	  border: solid #F2F2F2;
+		border-width: 0 0.3vw 0.3vw 0;
+		display: inline-block;
+		padding: 1.5vw;
+	  box-sizing: border-box;
+	  transform: rotate(-135deg);
+	}
+
+	/* final credits -------------------------------- */
+
+	.credits {
+		margin-top: 20vw;
+		font-size: 2.7vw;
+		line-height: 1.4em;
+		font-weight: 200;
+		padding-bottom: 5vw;
+	}
+
+	/* videos -------------------------------- */
+
+	.vertical video {
+		position: relative;
+		left: -45%;
+		margin-bottom: 3rem;
+	}
+
+
+	/* FACTORY - PROJECTS  ----------------------------------------------------- */
+
+	#fa-info {
+		margin-bottom: 0;
+	}
+
+	.info-clb {
+		margin-top: 1vw;
+		margin-bottom: 10vw;
+		line-height: 1.3em;
+		font-size: 2.7vw;
+	}
+
+
+	/* BOOK COLLECTION ----------------------------------------------------- */
+
+	/* cover image ----------------------------------------------------- */
+
+	.vertical {
+		width: 88vw;
+		box-sizing: border-box;
+		margin-top: 1rem;
+		border-radius: 5px;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.vertical .cover {
+		margin-bottom: 1rem;
+	}
+
+	.vertical img {
+		width: 150%;
+		position: relative;
+		left: -25%;
+		margin: 0;
+	}
+
+	/* other images ----------------------------------------------------- */
+
+	.vertical2 {
+		width: 100vw;
+		position: relative;
+		left: -6vw;
+		box-sizing: border-box;
+		margin-top: 1rem;
+		border-radius: 5px;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.vertical3 {
+		width: 170vw;
+		position: relative;
+		left: -40vw;
+		box-sizing: border-box;
+		margin-top: 1rem;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.vertical3 img {
+		margin: 0;
+	}
+
+	#bc-3covers {
+		margin-bottom: 35px;
+	}
+
+	#cover img {
+		width: 180%;
+		position: relative;
+		left: -53%;
+	}
+
+	#cover-02 img {
+		width: 165%;
+		position: relative;
+		left: -37%;
+		margin: 0;
+	}
+
+	#cover-03 img {
+		width: 165%;
+		position: relative;
+		left: -20%;
+		margin: 0;
+	}
+
+	#bc-vertical  {
+		width: 120%;
+		position: relative;
+		left: -10%;
+		margin: 0;
+		margin-bottom: 2em;
+	}
+
+	#bc-plain {
+		width: 140%;
+		position: relative;
+		left: -20%;
+	}
+
+
+	/* TRANSPARENCY ----------------------------------------------------- */
+
+	/* images ----------------------------------------------------- */
+
+	#tp-m4 {
+		height: 100%;
+	}
+
+	#tp-m4 img {
+		top: 0;
+	}
+
+	.vertical-tp {
+		width: 200vw;
+		position: relative;
+		top: -7vw;
+		left: -55vw;
+	}
+
+	.vertical-tp-pc {
+		width: 140vw;
+		left: -26vw;
+		padding: 0;
+		padding-bottom: 1rem;
+	}
+
+	.vertical-tp-pc:last-of-type {
+		margin-bottom: 0;
+	}
+
+	.vertical-tp-pc2 {
+		width: 160vw;
+		left: -45vw;
+		padding: 0;
+		margin-bottom: 10vw;
+	}
+
+
+	/* BANCO ALIMENTAR ----------------------------------------------------- */
+
+	/* images ----------------------------------------------------- */
+
+	#ba-02 {
+		width: 150vw;
+		left: -30vw;
+	}
+
+	#ba-03 {
+		width: 195vw;
+		left: -52.5vw;
+	}
+
+	.ba-colors {
+		width: 110vw;
+		height: 32vw;
+		left: -11vw;
+		margin-top: 1rem;
+		margin-bottom: 0vw;
+		padding: 0;
+		padding-bottom: 1rem;
+	}
+
+	#ba-colors {
+		top: -19.5vw;
+	}
+
+	.vertical-ba {
+		width: 190vw;
+		left: -50vw;
+	}
+
+	.vertical-ba2 {
+		width: 130vw;
+		left: -20vw;
+	}
+
+	#ba-07 {
+		width: 150vw;
+		left: -30vw;
+	}
+
+	.vertical-ba2:last-of-type {
+		width: 170vw;
+		height: 70vw;
+		margin-top: 5vw;
+		left: -40vw;
+	}
+}
+
+@media only screen and (min-width: 700px) {
+
+	main {
+		padding: 0 4vw 10vw 4vw;
+	}
+
+	h2 {
+		font-size: 5.5vw;
+		padding-top: 12vw;
+		margin-bottom: 2vw;
+	}
+
+	h3 {
+		font-weight: 600;
+		margin-bottom: 0.65em;
+		font-size: 2.2vw;
+	}
+
+	/* MAIN ------------------------------------------------------------- */
+	.landing div {
+		width: 55vw;
+	}
+
+	.myPicture {
+	  width: 30vw;
+	}
+
+	.welcome {
+		font-size: 4.7vw;
+	}
+
+	.main-note {
+		margin-top: 4vw;
+	}
+
+	.main-note p {
+	  font-size: 3vw;
+	}
+
+	.menu {
+	position: absolute;
+	bottom: 1.7vw;
+	right: 4vw;
+}
+
+	/* MENU OVERLAY WINDOW */
+.nav-items ul {
+	font-size: 4.2vw;
+}
+
+
+	/* PROJECTS --------------------------------------------------------*/
+	.box {
+		font-size: 2vw;
+		padding: 0.6vw 1.2vw;
+		margin-left: 0.3vw;
+		margin-right: 0.3vw;
+	}
+
+	.projects-nav {
+		margin-bottom: 6vw;
+		display: flex;
+		justify-content: center;
+	}
+
+	.project-intro {
+	height: 26.8vw;
+	width: 32%;
+	margin-bottom: 2vw;
+	border-radius: 6px;
+	float: left;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
+}
+
+#projects h2 {
+	text-align: center;
+}
+
+.project-intro h3 {
+	position: relative;
+	top: 1.2vw;
+	left: 1vw;
+	font-size: 2vw;
+}
+
+.title-holder {
+	color: #F2F2F2;
+	background: black;
+	height: 5vw;
+	position: relative;
+	width: 100%;
+	top: -1vw;
+}
+
+	/* SKILLS & ABOUT --------------------------------------------------------*/
+	#skills, #about {
+		clear: left;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		margin-bottom: 4vw;
+	}
+
+	#skills h2, #about h2 {
+		margin-bottom: 6vw;
+	}
+
+	#skills p,  #about p {
+	font-size: 2.2vw;
+	line-height: 1.5em;
+	margin-bottom: 1em;
+	width: 60vw;
+}
+
+#skills span {
+	font-size: 2.2vw;
+	font-weight: 600;
+	color: var(--accent);
+}
+
+	#about .myPicture {
+		width: 20vw;
+		margin-bottom: 6vw;
+	}
+
+	/* FOOTER ---------------------------------------------------------*/
+
+	footer {
+		font-size: 2vw;
+		line-height: 1.3em;
+		padding: 6vw 4vw 5vw 4vw;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+	footer section:first-of-type {
+		width: 30%;
+		margin-bottom: 0;
+	}
+
+	footer p {
+		margin-bottom: 0.65em;
+		width: 100%;
+	}
+	/* OTHER PAGES - PROJECTS ----------------------------------------------------- */
+
+	/* LOCAL NAV - TOP OF PAGE ----------------------------------------------------- */
+
+	.local-nav {
+		position: relative;
+		top: 15vw;
+		font-size: 2.5vw;
+	}
+
+	.local-nav span {
+		font-size: 2.5vw;
+	}
+
+	/* PROJECTS ESSENTIALS ----------------------------------------------------- */
+
+	h1 {
+		font-size: 5vw;
+		margin-bottom: 5vw;
+	}
+
+	.project h1 {
+		margin-top: 4em;
+		width: 100%;
+		display: block;
+		margin-bottom: 2.5vw;
+	}
+
+	.project .box {
+	margin-bottom: 3vw;
+	margin-left: 0;
+	font-size: 2.2vw;
+	padding: 0.7vw 1vw;
+}
+
+.project #bc-box {
+	margin-bottom: 0.2vw;
+}
+
+.infos {
+	margin-top: 0;
+	margin-bottom: 12vw;
+	font-size: 2vw;
+	clear: left;
+}
+
+.project img {
+	border-radius: 5px;
+	margin-bottom: 2.2vw;
+
+	width: 90%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.project .cover {
+	margin:0;
+	margin-bottom: 3vw;
+	border-radius: 0;
+	width: 100%;
+	/* width: 80%; */
+}
+
+	/* text -------------------------------- */
+
+	.text {
+		font-size: 2.5vw;
+		line-height: 1.5em;
+		margin-top: 3em;
+		margin-bottom: 3.5em;
+		width: 85%;
+	}
+
+	.text:last-of-type {
+		margin-top: 10vw;
+		margin-bottom: 0;
+	}
+
+	#collection .text {
+		margin-top: 1em;
+		margin-bottom: 3em;
+	}
+	/* arrow -------------------------------- */
+
+	.arrow {
+		color: var(--accent);
+	}
+
+	.arrow-head {
+		margin-top: 15vw;
+	  border: solid #F2F2F2;
+		border-width: 0 0.3vw 0.3vw 0;
+		display: inline-block;
+		padding: 1.5vw;
+	  box-sizing: border-box;
+	  transform: rotate(-135deg);
+	}
+
+	/* final credits -------------------------------- */
+
+	.credits {
+		margin-top: 20vw;
+		font-size: 2.3vw;
+		line-height: 1.4em;
+		font-weight: 200;
+		padding-bottom: 5vw;
+	}
+
+	/* videos -------------------------------- */
+
+	.vertical video {
+		width: 100%;
+		position: relative;
+		left: 4vw;
+		margin-bottom: 0;
+	}
+
+
+	/* LIAB - PROJECTS  ----------------------------------------------------- */
+	.liab {
+		position: relative;
+		left: 4.5vw;
+	}
+
+	/* .liab:first-of-type {
+		width: 70%;
+	} */
+
+	#l-cover {
+		top: -6.8vw;
+	}
+
+	/* FACTORY - PROJECTS  ----------------------------------------------------- */
+
+	#f-cover {
+		top: -4vw;
+	}
+
+	#fa-info {
+		margin-bottom: 0;
+	}
+
+	#fa-04 {
+		width: 100%;
+	}
+
+	#factory .vertical {
+		width: 100%;
+	}
+
+	.info-clb {
+		margin-top: 0.5vw;
+		margin-bottom: 10vw;
+		line-height: 1.3em;
+		font-size: 2vw;
+	}
+
+
+	/* BOOK COLLECTION ----------------------------------------------------- */
+
+		/* cover image ----------------------------------------------------- */
+
+	/* #bc-cover {
+		display: flex;
+		justify-content: flex-end;
+	} */
+
+		.vertical .cover {
+			margin: 0;
+			width: 100%;
+			position: relative;
+			left: 0;
+			margin-top: 1vw;
+			margin-bottom: 3.5vw;
+
+		}
+
+		.vertical img #bc-cover {
+			width: 100%;
+			left: 0;
+		}
+
+		.vertical img {
+			width: 150%;
+			left: -25%;
+		}
+
+		.vertical3 {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		width: 140%;
+		position: relative;
+		left: -10vw;
+		margin: 0;
+		padding: 0;
+
+	}
+
+		/* other images ----------------------------------------------------- */
+
+		#cover img {
+			width: 70%;
+			left: 12vw;
+		}
+
+		#cover-02 img {
+			width: 70%;
+			left: 15vw;
+			margin-top: 4vw;
+		}
+
+		#cover-03 img {
+			width: 70%;
+			left: 17vw;
+		}
+
+		#bc-vertical  {
+			width: 75%;
+			position: relative;
+			left: 12vw;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+
+		#bc-vertical img {
+			margin: 0;
+		}
+
+		#bc-3covers {
+			width: 70vw;
+			margin-top: 15vw;
+			margin-bottom: 10vw;
+			position: relative;
+			left: 10vw;
+		}
+
+		#bc-plain {
+		width: 100%;
+		position: relative;
+		left: 0%;
+	}
+
+		/* TRANSPARENCY ----------------------------------------------------- */
+
+		/* images ----------------------------------------------------- */
+
+		#tp-m4 {
+			height: 100%;
+			position: relative;
+			left: -19vw;
+		}
+
+		#tp-m4 img {
+			top: 0;
+		}
+
+		.vertical-tp {
+		width: 150vw;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+		.vertical-tp-pc {
+			width: 104%;
+			left: 3vw;
+			top: 5vw;
+			margin-bottom: 10vw;
+			background: transparent;
+		}
+
+		.vertical-tp-pc:last-of-type {
+			margin-bottom: -6vw;
+			width: 111%;
+			left: 0;
+		}
+
+		.vertical-tp-pc2 {
+		width: 104%;
+		position: relative;
+		left: 3vw;
+		margin-bottom: 0;
+	}
+
+		/* BANCO ALIMENTAR ----------------------------------------------------- */
+
+		/* images ----------------------------------------------------- */
+
+		#ba-01, #ba-02, #ba-03  {
+			width: 100%;
+			left: 4.5vw;
+		}
+
+		.ba-colors {
+			width: 110vw;
+			height: 32vw;
+			left: -11vw;
+			margin-top: 8vw;
+			margin-bottom: 8vw;
+			padding: 0;
+			padding-bottom: 1rem;
+		}
+
+		#ba-colors {
+			top: -16vw;
+			left: 8vw;
+		}
+
+		.vertical-ba {
+			width: 160vw;
+			left: -25vw;
+		}
+
+		.vertical-ba2 {
+			width: 110vw;
+			left: -3vw;
+		}
+
+		#ba-07 {
+			width: 150vw;
+			left: -22vw;
+		}
+
+		.vertical-ba video {
+			position: relative;
+			left: -7vw;
+		}
+
+		#ba-10 {
+			position: relative;
+			left: 2vw;
+		}
+
+		.vertical-ba2:last-of-type {
+			width: 130vw;
+			height: 53vw;
+			margin-top: 5vw;
+			left: -14vw;
+			margin-bottom: -9vw;
+		}
+	}
+
+@media only screen and (min-width: 992px) {
+
+	h2 {
+		font-size: 4vw;
+		padding-top: 5vw;
+		text-align: center;
+	}
+
+	h3 {
+		font-weight: 600;
+		margin-bottom: 0.65em;
+		font-size: 1.4vw;
+	}
+
+	/* NAV --------------------------------------------------------------*/
+nav {
+  height: 3.5vw;
+
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+nav p {
+	font-size: 1.2vw;
+	position: absolute;
+	bottom: 1.1vw;
+	left: 4vw;
+}
+
+.bar {
+  width: 1.7vw;
+  height: 2px;
+  margin-bottom: 0.3vw;
+  background: #333333;
+  border-radius: 10px;
+}
+
+.menu {
+  bottom: 0.8vw;
+	right: 4vw;
+}
+
+/* MENU OVERLAY WINDOW */
+
+.nav-items ul {
+	height: 95vh;
+	font-size: 2vw;
+	line-height: 1.5em;
+}
+
+	/* MAIN ------------------------------------------------------------- */
+	main {
+  padding: 0 4vw 0 4vw;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+	.landing div {
+		width: 55vw;
+	}
+
+	.myPicture {
+	  width: 15vw;
+		margin-bottom: 2vw;
+		float: left;
+		margin-right: 4vw;
+	}
+
+	.welcome {
+		font-size: 2.7vw;
+	}
+
+	.main-note {
+		margin-top: 2vw;
+
+	}
+
+	.main-note p {
+	  font-size: 1.7vw;
+	}
+
+
+	/* PROJECTS --------------------------------------------------------*/
+	.box {
+		font-size: 1.2vw;
+		padding: 0.4vw 0.8vw;
+		margin-left: 0.3vw;
+		margin-right: 0.3vw;
+	}
+
+	.projects-nav {
+		margin-bottom: 6vw;
+		display: flex;
+		justify-content: center;
+	}
+
+	.project-intro {
+	height: 26.8vw;
+	width: 32%;
+	margin-bottom: 2vw;
+	border-radius: 6px;
+	float: left;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
+}
+
+.project-intro h3 {
+	position: relative;
+	top: 1.5vw;
+	left: 1vw;
+	font-size: 2vw;
+}
+
+.project-intro img {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.title-holder {
+	color: #F2F2F2;
+	background: black;
+	height: 5vw;
+	position: relative;
+	width: 100%;
+	top: -1vw;
+}
+
+	/* SKILLS & ABOUT --------------------------------------------------------*/
+	#skills h2, #about h2 {
+		margin-bottom: 6vw;
+	}
+
+	#skills p,  #about p {
+	font-size: 1.5vw;
+	line-height: 1.5em;
+	margin-bottom: 1vw;
+	width: 35vw;
+
+}
+
+#about p {
+	clear: left;
+}
+
+#skills span {
+	font-size: 1.5vw;
+}
+
+	#about .myPicture {
+		width: 12vw;
+		margin: 0;
+		margin-bottom: 1.5vw;
+
+	}
+
+	/* FOOTER ---------------------------------------------------------*/
+
+footer {
+	background: #F2F2F2;
+	padding: 4vw 4vw 4vw 4vw;
+	font-size: 1.1vw;
+	line-height: 1.5em;
+	width: 100%;
+	margin: 0;
+	margin-top: 0vw;
+}
+
+
+footer section:first-of-type {
+	width: 30.5%;
+	margin-bottom: 0;
+}
+
+footer p {
+	margin-bottom: 0em;
+}
+
+	/* OTHER PAGES - PROJECTS ----------------------------------------------------- */
+
+	/* LOCAL NAV - TOP OF PAGE ----------------------------------------------------- */
+
+	.local-nav {
+		position: relative;
+		top: 5vw;
+		font-size: 1.3vw;
+	}
+
+	.local-nav span {
+		font-size: 1.3vw;
+	}
+
+	/* PROJECTS ESSENTIALS ----------------------------------------------------- */
+
+	h1 {
+		font-size: 3vw;
+		margin-bottom: 0.5em;
+	}
+
+	.project .box {
+		margin-bottom: 1.5vw;
+		margin-left: 0;
+		font-size: 1.2vw;
+		padding: 0.4vw 0.8vw;
+		font-weight: 400;
+	}
+
+	.project #bc-box {
+		margin-bottom: 0.2vw;
+	}
+
+	.project h1 {
+		margin-top: 2.5em;
+		width: 30%;
+		display: block;
+		margin-bottom: 1.2vw;
+	}
+
+	.infos {
+		margin-top: 0;
+		margin-bottom: 10vw;
+		font-size: 1.2vw;
+		clear: left;
+		font-weight: 300;
+	}
+
+	.project img {
+		border-radius: 5px;
+		margin-bottom: 2.2vw;
+
+		width: 61%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.project .cover {
+		position: relative;
+		top: -10vw;
+		float: right;
+		margin:0;
+		margin-bottom: 6vw;
+		border-radius: 0;
+	}
+
+	/* text -------------------------------- */
+
+	.text {
+		font-size: 1.5vw;
+		line-height: 1.5em;
+		margin-top: 3em;
+		margin-bottom: 3.5em;
+		width: 47%;
+	}
+
+	#first {
+	width: 37%;
+}
+
+	.text:last-of-type {
+		margin-top: 5vw;
+		margin-bottom: 0;
+	}
+
+	#collection .text {
+		margin-top: 1em;
+		margin-bottom: 3em;
+	}
+	/* arrow -------------------------------- */
+
+	.arrow {
+		color: var(--accent);
+	}
+
+	.arrow-head {
+		margin-top: 8vw;
+	  border: solid #F2F2F2;
+		border-width: 0 0.2vw 0.2vw 0;
+		display: inline-block;
+		padding: 0.8vw;
+	  box-sizing: border-box;
+	  transform: rotate(-135deg);
+	}
+
+	/* final credits -------------------------------- */
+
+	.credits {
+		margin-top: 10vw;
+		font-size: 1.2vw;
+		padding-bottom: 4vw;
+	}
+
+	/* videos -------------------------------- */
+	.vertical video {
+		width: 100%;
+		position: relative;
+		left: 4vw;
+		margin-bottom: 0;
+	}
+
+	/* LIAB - PROJECTS  ----------------------------------------------------- */
+	.liab {
+		position: relative;
+		left: 18vw;
+	}
+
+	#l-cover {
+		top: -4vw;
+		width: 60%;
+	}
+
+	/* FACTORY - PROJECTS  ----------------------------------------------------- */
+
+	#f-cover {
+		top: -3.5vw;
+		width: 60%;
+	}
+
+	#fa-info {
+		margin-bottom: 0;
+	}
+
+	.info-clb {
+		margin-top: 0.2vw;
+		margin-bottom: 6vw;
+		line-height: 1.4em;
+		font-size: 1.2vw;
+		width: 30%;
+	}
+
+	#factory img:not(.cover) {
+		width: 80%;
+		left: 9vw;
+	}
+
+	#fa-04 {
+		position: relative;
+		left: 6vw;
+	}
+
+	#vid {
+		width: 80%;
+		position: relative;
+		left: 9vw;
+	}
+
+	.embed-container {
+position: relative;
+padding-bottom: 56.25%;
+height: 0; overflow: hidden;
+max-width: 80%;
+left: 9vw;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+position: absolute;
+top: 0; left: 0;
+width: 100%;
+height: 100%;
+}
+
+#factory p:last-of-type:not(.credits) {
+	position: relative;
+	top: -6vw;
+}
+
+#factory p:last-of-type:not(.text) {
+	position: relative;
+	top: 0;
+}
+
+
+	/* BOOK COLLECTION ----------------------------------------------------- */
+
+	/* cover image ----------------------------------------------------- */
+
+/* #bc-cover {
+	display: flex;
+	justify-content: flex-end;
+} */
+
+	.vertical .cover {
+		margin: 0;
+		width: 55%;
+		position: absolute;
+		top: 9vw;
+		left: 42vw;
+
+	}
+
+	.vertical img #bc-cover {
+		width: 100%;
+		left: 0;
+	}
+
+	.vertical img {
+		width: 150%;
+		left: -25%;
+	}
+
+	.vertical3 {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 140%;
+	position: relative;
+	left: 7vw;
+	margin: 0;
+	padding: 0;
+
+}
+
+	/* other images ----------------------------------------------------- */
+
+	#cover img {
+		width: 70%;
+		left: 12vw;
+	}
+
+	#cover-02 img {
+		width: 70%;
+		left: 15vw;
+		margin-top: 4vw;
+	}
+
+	#cover-03 img {
+		width: 70%;
+		left: 17vw;
+	}
+
+	#bc-vertical  {
+		width: 75%;
+		position: relative;
+		left: 12vw;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	#bc-vertical img {
+		margin: 0;
+	}
+
+	#bc-3covers {
+		width: 70vw;
+		margin-top: 15vw;
+		margin-bottom: 10vw;
+		position: relative;
+		left: 10vw;
+	}
+
+	#bc-plain {
+	width: 100%;
+	position: relative;
+	left: 0%;
+}
+
+	/* TRANSPARENCY ----------------------------------------------------- */
+
+	/* images ----------------------------------------------------- */
+#transparency .cover {
+	width: 59%;
+	margin-top: 6vw;
+}
+
+	#tp-m4 {
+		height: 100%;
+		left: 0vw;
+	}
+
+	#tp-m4 img {
+		top: 0;
+	}
+
+	.vertical-tp {
+	width: 150vw;
+	position: relative;
+	top: 0;
+	left: 0vw;
+}
+
+	.vertical-tp-pc {
+		width: 140%;
+		left: 6vw;
+		top: 5vw;
+		margin-bottom: 9vw;
+		background: transparent;
+	}
+
+	.vertical-tp-pc:last-of-type {
+		margin-bottom: -6vw;
+		width: 140%;
+		left: 6vw;
+		top: 0;
+	}
+
+	.vertical-tp-pc2 {
+	width: 140%;
+	position: relative;
+	left: 6vw;
+	margin-bottom: 0;
+}
+
+	/* BANCO ALIMENTAR ----------------------------------------------------- */
+
+	/* images ----------------------------------------------------- */
+
+	#banco img:first-of-type {
+		top: -3.5vw;
+		width: 54%;
+		margin-right: 3vw;
+	}
+
+	#ba-01, #ba-02, #ba-03 {
+		width: 110%;
+		left: 18vw;
+	}
+
+	.ba-colors {
+		width: 110vw;
+		height: auto;
+		left: 15vw;
+		margin-top: -6vw;
+		margin-bottom: -11vw;
+		padding: 0;
+		padding-bottom: 1rem;
+	}
+
+	#ba-colors {
+		top: -19.5vw;
+		left: 0.5vw;
+	}
+
+	.vertical-ba {
+		width: 110vw;
+		left: 15vw;
+		top: 4vw;
+		margin-bottom: 2vw;
+	}
+
+	.vertical-ba2 {
+		width: 80%;
+		position: relative;
+		left: 25vw;
+	}
+
+	/* #banco img:nth-of-type() */
+
+	#ba-05, #ba-06 {
+		position: relative;
+		width: 55%;
+		left: -0.5vw;
+	}
+
+	#ba-07 {
+		width: 100vw;
+		left: 17vw;
+	}
+
+	#ba-09 {
+		width: 70%;
+		position: relative;
+		left: -6vw;
+		top: -2vw;
+		margin-bottom: -2vw;
+	}
+
+	.vertical-ba video {
+		width: 65%;
+		position: relative;
+		left: -7vw;
+	}
+
+	#ba-10 {
+		position: relative;
+		left: 19vw;
+		margin-top: 7vw;
+		margin-bottom: -14vw;
+	}
+
+	.vertical-ba2:last-of-type {
+	width: auto;
+	height: auto;
+	margin-top: 0;
+	left: 0;
+	margin-bottom: 0;
+}
+}
